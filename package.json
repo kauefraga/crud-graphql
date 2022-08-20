@@ -6,7 +6,6 @@
     "pnpm": ">=7.5.0"
   },
   "scripts": {
-    "install": "pnpm i",
     "all": "",
     "run:backend": "",
     "run:frontend": "",
