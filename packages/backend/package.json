@@ -1,0 +1,43 @@
+{
+  "private": true,
+  "name": "backend",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kauefraga/crud-graphql.git",
+    "directory": "packages/backend"
+  },
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node .",
+    "dev": "tsnd -r tsconfig-paths/register --respawn --transpile-only src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "graphql",
+    "graphql-server",
+    "apollo-server",
+    "crud",
+    "api"
+  ],
+  "author": "Kauê Fraga Rodrigues <kauefragarodrigues456@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.7.7",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "eslint": "^8.22.0",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.1.0",
+    "typescript": "*"
+  },
+  "dependencies": {
+    "apollo-server": "^3.10.1",
+    "class-validator": "^0.13.2",
+    "dotenv": "^16.0.1",
+    "graphql": "^15.3.0",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.1.1"
+  }
+}
