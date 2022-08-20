@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "name": "crud-graphql",
+  "engines": {
+    "node": ">=16.15.1",
+    "pnpm": ">=7.5.0"
+  },
+  "scripts": {
+    "install": "pnpm i",
+    "all": "",
+    "run:backend": "",
+    "run:frontend": "",
+    "lint": ""
+  },
+  "author": "Kauê Fraga Rodrigues <kauefragarodrigues456@gmail.com>",
+  "license": "MIT"
+}
