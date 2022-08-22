@@ -13,9 +13,7 @@ export class UserResolver {
     private createUserUseCase: CreateUserUseCase
   ) {
     this.usersRepository = new PostgresUsersRepository();
-    this.createUserUseCase = new CreateUserUseCase(
-      this.usersRepository
-    )
+    this.createUserUseCase = new CreateUserUseCase(this.usersRepository);
   }
 
   @Query(() => [User])
@@ -29,9 +27,8 @@ export class UserResolver {
     const user = await this.createUserUseCase.execute({
       id: randomUUID(),
       name,
-    })
+    });
 
     return user;
   }
-
 }

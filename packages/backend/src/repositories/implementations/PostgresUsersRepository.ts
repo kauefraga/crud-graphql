@@ -16,7 +16,7 @@ export class PostgresUsersRepository implements IUsersRepository {
 
   async create(user: User): Promise<User> {
     this.users.push(user);
-    return user
+    return user;
   }
 
   async delete(user: User): Promise<void> {

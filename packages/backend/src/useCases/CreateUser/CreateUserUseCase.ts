@@ -1,12 +1,11 @@
+import { User } from '../../models/User';
 import { IUsersRepository } from '../../repositories/IUsersRepository';
 import { ICreateUserRequestDTO } from './CreateUserDTO';
 
 export class CreateUserUseCase {
-  constructor(
-    private usersRepository: IUsersRepository,
-  ) { }
+  constructor(private usersRepository: IUsersRepository) {}
 
-  async execute(data: ICreateUserRequestDTO): Promise<void> {
+  async execute(data: ICreateUserRequestDTO): Promise<User> {
     const userAlreadyExists = await this.usersRepository.findById(data.id);
 
     if (userAlreadyExists) {

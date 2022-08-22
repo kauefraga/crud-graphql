@@ -6,9 +6,7 @@ import { UserResolver } from './resolvers/UserResolver';
 
 async function buildApp() {
   const schema = await buildSchema({
-    resolvers: [
-      UserResolver
-    ],
+    resolvers: [UserResolver],
     emitSchemaFile: path.resolve(__dirname, 'graphql/schema.gql'),
   });
 
@@ -16,7 +14,7 @@ async function buildApp() {
     schema,
     cors: {
       origin: '*',
-    }
+    },
   });
 
   return app;

@@ -4,7 +4,8 @@ import app from './app';
 async function bootServer(port: string | number) {
   const server = await app();
 
-  return await server.listen({ port })
+  return await server
+    .listen({ port })
     .then((server) => {
       console.log(`[server] running on ${server.url}`);
     })
