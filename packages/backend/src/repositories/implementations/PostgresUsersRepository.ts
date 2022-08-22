@@ -19,7 +19,13 @@ export class PostgresUsersRepository implements IUsersRepository {
     return user;
   }
 
-  async delete(user: User): Promise<void> {
-    this.users.splice(this.users.indexOf(user), 1);
+  async deleteById(id: string): Promise<User> {
+    for (const user of this.users) {
+      if (user.id === id) {
+        this.users.splice(this.users.indexOf(user), 1);
+        return user;
+      }
+    }
+    throw new Error(`User ${id} does not found`);
   }
 }
