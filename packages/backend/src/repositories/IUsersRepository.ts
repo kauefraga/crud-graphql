@@ -6,5 +6,5 @@ export interface IUsersRepository {
 
   findById(id: string): Promise<User | undefined>;
   create(user: User): Promise<User>;
-  delete(user: User): Promise<void>;
+  deleteById(id: string): Promise<User>; // i guess this shouldn't return User
 }
