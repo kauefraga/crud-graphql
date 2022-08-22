@@ -31,4 +31,11 @@ export class UserResolver {
 
     return user;
   }
+
+  @Mutation(() => User)
+  async deleteUser(@Arg('id') userId: string): Promise<User> {
+    const user = await this.usersRepository.deleteById(userId);
+
+    return user;
+  }
 }
